@@ -1,0 +1,200 @@
+/* General Layout */
+.main-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Allows scrolling when content overflows */
+}
+
+.main-content {
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.add-new-list {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: auto;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+
+.add-new-list:hover {
+    background-color: #45a049;
+}
+
+/* Shopping Lists Section */
+.shopping-lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    overflow: visible; /* Allows overflow if needed */
+}
+
+.shopping-list-tile {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.shopping-list-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shopping-list-tile h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.shopping-list-tile p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Delete Icon */
+.delete-icon {
+    font-size: 30px; /* Size of the red X */
+    color: red; /* Red color for delete icon */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 60px; /* Adjusted position */
+    transform: translateY(-50%); /* Vertically center the icon */
+    transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+    color: darkred;
+}
+
+
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Maximum width */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.modal-content button:last-child {
+    background-color: #ff4d4d;
+}
+
+.modal-content button:last-child:hover {
+    background-color: #e04040;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.filter-buttons button {
+    background-color: #ddd;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 120px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.filter-buttons button:hover {
+    background-color: #bbb;
+}
+
+.filter-buttons .active-filter {
+    background-color: #4CAF50;
+    color: white;
+}

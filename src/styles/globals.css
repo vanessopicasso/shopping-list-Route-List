@@ -1,0 +1,310 @@
+/* Global Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;  /* Ensures space between app name and user name */
+    align-items: center;  /* Centers the content vertically */
+    padding: 0 20px;  /* Horizontal padding */
+    background-color: #4CAF50;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container {
+    padding-top: 80px;  /* Adjusted to accommodate the fixed header */
+}
+
+.header .user-name {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    color: #4caf50;
+}
+
+.header .app-name {
+    font-family: 'Lobster', sans-serif;  /* Custom font for app name */
+    font-size: 32px;  /* Customize the font size */
+    font-weight: 600;  /* Make it bold */
+    color: white;  /* Set color to white */
+    flex-grow: 1;  /* This will push the app name to the left side */
+    text-align: left;
+}
+
+/* Shopping List Header */
+.list-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.edit-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #4caf50;
+    margin-left: 10px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.edit-button:hover {
+    color: #45a049;
+}
+
+.edit-name input {
+    font-size: 1.2rem;
+    padding: 5px;
+    width: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Shopping List Styles */
+.shopping-list {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+select {
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Item List Styles */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.item.resolved span {
+    text-decoration: line-through;
+    color: grey;
+    opacity: 0.6;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.item-details input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.item-details span {
+    margin-right: 20px;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+
+.item-quantity input {
+    width: 50px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.item button.remove-btn {
+    background: none;
+    color: red;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.item button.remove-btn {
+    margin-left: auto;
+}
+
+.item button.remove-btn:hover {
+    color: darkred;
+}
+
+/* Select Style */
+select {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .shopping-list {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    button,
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .item {
+        flex-wrap: nowrap;
+    }
+
+    .item-details {
+        width: 60%;
+    }
+
+    .item-quantity {
+        width: 20%;
+        margin-right: 0;
+    }
+
+    .remove-btn {
+        width: auto;
+        margin-left: auto;
+    }
+
+    .item-quantity input {
+        width: 100%;
+    }
+}
+
+/* Member Management */
+.member-management {
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #ddd;
+}
+
+.member-management h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.member-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.member-details span {
+    margin-right: 20px;
+}
+
+.member-item button.remove-btn {
+    background: none;
+    color: red;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.member-item button.remove-btn:hover {
+    color: darkred;
+}
+
+.member-management input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.member-management button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.member-management button:hover {
+    background-color: #45a049;
+}
+
+.member-management input[type="text"],
+.member-management button {
+    margin-top: 10px;
+}
+
